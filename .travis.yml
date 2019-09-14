@@ -1,7 +1,9 @@
-language: python
-python:
-  - "3.6"
-install:
-  - pip install -r requirements.txt
-script:
-  - pytest
+dist: trusty
+sudo: required
+language: bash
+before_install:
+  - curl https://raw.githubusercontent.com/express42/otus-homeworks/2019-08/run.sh | bash
+notifications:
+  slack:
+    rooms:
+      secure: bMXx60c4FjsTNuw7TgJPXzSo9nVybMuCar8O/wm0Sy/AoqnIIbc8mTL5DfA9pBAmyx05T0+8jMh7ZaUSc8n7V0ZyB8oILMaes5x8NOS9Jq4bo4Sed3RnAUY/MmXT4KNpHFvLaw7O7Gyrc9BYyePLttOWo9yfI4tcDJqUtqJ02cfykLhSZAFQhh0TEVasKstzBj79FE5yHwXDFvw6ncOtlvJuGx+MrvIbdXH3PB3ujbmY9x1ZxcrlBYHhIsSMh735jcThnWD0LNhpi5vYbxTuNsUW2tFcyNF+S4lDutZ0ZSDP9w7Rc2EU4uWHn5dS9o7NfZg9AtBiJDXhFb0IaPeTgLQSM6ug7bOESgV2Q9UgzBsVnt948vfG1gAWE1dS+S498PYFjzAYK4jt/7HBAkbvbYXL+W3y+qcv2vd5iyBA8EmgHpCJBlZpmk7tIf2tG4GEGMQe0gRIMipDhiTJhreIXL8UFYZl2JWALYadAaE2paWY0ZSjNNqPZ3sHRiIplqGf997p7KvMZRbA2C+qWKR23pT1gGxDpg2BB8IIMpzcvQg7gsEsL/mGe6p9I6dKsHbTYuw8CbINAIKAI+atcPPF3cEi50O9UpNrVYrzqcNm9cFCWEtWcNBB9zW+ZGnXjbgUf3y+p8AK5eSlAy33ozY5a0XORmEqeJpc6lGWQdBOAfg=
